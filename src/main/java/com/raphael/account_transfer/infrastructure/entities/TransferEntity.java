@@ -18,7 +18,7 @@ import lombok.Data;
 @Entity
 @Table(name = "transfers")
 @Data
-public class Transfer {
+public class TransferEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,11 +26,11 @@ public class Transfer {
 
     @ManyToOne
     @JoinColumn(name = "from_account_id")
-    private Account fromAccount;
+    private AccountEntity fromAccount;
 
     @ManyToOne
     @JoinColumn(name = "to_account_id")
-    private Account toAccount;
+    private AccountEntity toAccount;
 
     private BigDecimal amount;
 
