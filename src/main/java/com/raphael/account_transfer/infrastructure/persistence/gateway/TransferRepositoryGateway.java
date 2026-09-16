@@ -2,11 +2,14 @@ package com.raphael.account_transfer.infrastructure.persistence.gateway;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.raphael.account_transfer.application.gateway.TransferGateway;
 import com.raphael.account_transfer.domain.model.Transfer;
 import com.raphael.account_transfer.infrastructure.persistence.mapper.TransferEntityMapper;
 import com.raphael.account_transfer.infrastructure.persistence.repository.TransferRepository;
 
+@Component
 public class TransferRepositoryGateway implements TransferGateway {
     private final TransferRepository repository;
     private final TransferEntityMapper mapper;
